@@ -1,0 +1,10 @@
+@mixin link-hover($color, $color2: $green-200, $underline: underline) {
+    color: $color;
+
+    &:hover {
+        text-decoration: $underline;
+
+        color: $color2;
+        transition: color 0.15s ease-in-out;
+    }
+}

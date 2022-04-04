@@ -1,0 +1,57 @@
+.cards {
+    // min-height: 50vh;
+
+    margin-bottom: 1.6rem;
+}
+
+.cards__row {
+    transition: opacity 0.15s linear;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+.cards__row_active {
+    opacity: 1;
+    height: auto;
+}
+
+.title {
+    width: 100%;
+    margin-bottom: 3rem;
+
+    text-align: center;
+    font-weight: 500;
+    line-height: 100%;
+}
+
+.cards__pagination {
+    justify-content: center;
+
+    font-size: inherit;
+}
+
+.cards__pagination {
+    margin: 0;
+    transition: opacity 0.15s linear;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+
+    .page-link {
+        padding: 0.8rem 1.6rem;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    .page-item.disabled {
+        pointer-events: none;
+        opacity: 0.5;
+    }
+}
+
+.cards__pagination_active {
+    opacity: 1;
+    height: auto;
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		@@include('head.html', { "title": "Вход на сайт" })
+	</head>
+	<body>
+		<div class="page">
+			@@include('navbar.html')
+
+			<!-- Login -->
+			<section>
+				<div class="container">
+					<div class="row">
+						<div class="container container--xs">
+							<div
+								class="
+									row
+									d-flex
+									flex-column
+									align-content-center
+									justify-content-center
+									mb-3
+								"
+							>
+								<div class="col-12 col-xs-8 col-md-7 col-lg-5">
+									<div class="login">
+										<div class="card__body">
+											<div
+												class="
+													btn-container
+													d-flex
+													flex-column
+													align-items-center
+												"
+											>
+												<h1 class="text-center mb-3">
+													Войти с использованием учетной записи ТПУ:
+												</h1>
+												<a href="{{route('login_tpu')}}" class="btn">
+													<svg class="icon">
+														<use
+															href="/svg/sprite.svg#tpu-icon"
+														></use></svg
+													>Войти
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-12 col-xs-8 col-md-7 col-lg-5">
+									<div class="login">
+										<div class="card__body">
+											<h1 class="mb-1 text-center">Вход</h1>
+
+											<p class="text-center mb-3">
+												Пожалуйста, введите вашу почту и пароль.
+											</p>
+                                            {{Form::open(['route' => 'auth.login'])}}
+												<div class="mb-3">
+													<label
+														for="exampleInputEmail1"
+														class="form-label"
+														>Логин
+													</label>
+													<input
+														type="text"
+														class="form-control"
+                                                        name="login"
+														aria-describedby="emailHelp"
+													/>
+												</div>
+												<div class="mb-3">
+													<label
+														for="InputPassword"
+														class="form-label"
+														>Пароль</label
+													>
+													<input
+														type="password"
+														class="form-control"
+                                                        name="password"
+													/>
+												</div>
+
+												<div
+													class="
+														btn-container
+														d-flex
+														flex-column
+														align-items-center
+													"
+												>
+													<button
+														type="submit"
+														class="btn mb-2"
+													>
+														<svg class="icon">
+															<use
+																href="/svg/sprite.svg#login"
+															></use>
+														</svg>
+														Войти
+													</button>
+												</div>
+                                            {{Form::close()}}
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- ./ Login -->
+
+			@@include('footer.html')
+		</div>
+
+		@@include('js.html')
+	</body>
+</html>
